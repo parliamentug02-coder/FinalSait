@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ukrainian E-commerce Design System - Glassmorphism & Soft UI */
+
+@layer base {
+  :root {
+    /* Base Colors - Light Theme (Soft & Modern) */
+    --background: 220 25% 98%; /* Very light blue-gray */
+    --background-secondary: 220 25% 95%; /* Slightly darker light blue-gray */
+    --foreground: 220 20% 15%; /* Deep blue-gray for text */
+
+    /* Glassmorphism Base */
+    --glass-background: 0 0% 100%; /* Pure white for glass base */
+    --glass-opacity: 0.6; /* Default glass opacity */
+
+    /* Card System */
+    --card: 0 0% 100%; /* Pure white */
+    --card-foreground: 220 20% 15%; /* Deep blue-gray */
+    --card-shadow: 220 20% 70%; /* Soft grey for subtle shadow */
+
+    /* Primary Brand Color (Soft Blue) */
+    --primary: 210 80% 40%; /* Vibrant, but soft blue */
+    --primary-light: 210 80% 50%; /* Slightly lighter soft blue */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    /* Accent Brand Color (Soft Teal/Mint) */
+    --accent: 170 70% 40%; /* Soft teal/mint */
+    --accent-light: 170 70% 50%; /* Lighter soft teal/mint */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    /* Interactive Elements */
+    --secondary: 220 25% 90%; /* Light grey */
+    --secondary-foreground: 220 20% 15%; /* Deep blue-gray */
+    
+    --muted: 220 25% 90%; /* Light grey */
+    --muted-foreground: 220 15% 45%; /* Medium grey */
+
+    /* Destructive Elements */
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    /* Borders and Inputs */
+    --border: 220 20% 85%; /* Light grey border */
+    --input: 220 25% 90%; /* Light grey input background */
+    --ring: 170 70% 40%; /* Accent color for focus ring */
+
+    /* UI Enhancements */
+    --glow: 170 70% 40%; /* Accent color for glow */
+    --shadow-soft: 220 20% 70%; /* Soft shadow color */
+    --radius: 1.5rem; /* Standard border radius */
+    --radius-lg: 2rem; /* Larger border radius */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+    --gradient-soft: linear-gradient(135deg, hsl(var(--card)), hsl(var(--background-secondary)));
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease, transform 0.3s ease;
+
+    /* Sidebar (if used) */
+    --sidebar-background: 220 25% 95%;
+    --sidebar-foreground: 220 20% 15%;
+    --sidebar-primary: 210 80% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 170 70% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 20% 80%;
+    --sidebar-ring: 170 70% 40%;
+  }
+
+  .dark {
+    /* Base Colors - Dark Theme (Deep & Rich) */
+    --background: 220 20% 10%; /* Dark blue-gray */
+    --background-secondary: 220 20% 15%; /* Slightly lighter dark blue-gray */
+    --foreground: 220 25% 85%; /* Soft light blue-gray for text */
+
+    /* Glassmorphism Base - Dark Theme */
+    --glass-background: 220 20% 12%; /* Darker base for glass */
+    --glass-opacity: 0.4; /* Slightly lower opacity for dark glass */
+
+    /* Card System */
+    --card: 220 20% 12%; /* Darker card background */
+    --card-foreground: 220 25% 85%; /* Light text for cards */
+    --card-shadow: 220 20% 5%; /* Very dark for subtle shadow */
+
+    /* Primary Brand Color (Brighter Blue for contrast) */
+    --primary: 210 70% 50%; 
+    --primary-light: 210 70% 60%;
+    --primary-foreground: 0 0% 100%; /* White */
+
+    /* Accent Brand Color (Brighter Teal/Mint for contrast) */
+    --accent: 170 60% 50%; 
+    --accent-light: 170 60% 60%;
+    --accent-foreground: 0 0% 100%; /* White text on accent for better contrast */
+
+    /* Interactive Elements */
+    --secondary: 220 20% 20%; /* Darker secondary */
+    --secondary-foreground: 220 25% 85%; /* Light text */
+    
+    --muted: 220 20% 20%; /* Darker muted */
+    --muted-foreground: 220 15% 60%; /* Medium gray for muted text */
+
+    /* Destructive Elements */
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    /* Borders and Inputs */
+    --border: 220 20% 25%; /* Darker border */
+    --input: 220 20% 22%; /* Darker input background */
+    --ring: 170 60% 50%; /* New accent color */
+
+    /* UI Enhancements */
+    --glow: 170 60% 50%; /* New accent color */
+    --shadow-soft: 220 20% 5%; /* Darker shadow color */
+    /* Radius values remain unchanged */
+
+    /* Gradients for Dark Theme */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+    --gradient-soft: linear-gradient(135deg, hsl(var(--card)), hsl(var(--background-secondary)));
+
+    /* Animations remain unchanged */
+
+    /* Sidebar for Dark Theme */
+    --sidebar-background: 220 20% 15%;
+    --sidebar-foreground: 220 25% 85%;
+    --sidebar-primary: 170 60% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 20%;
+    --sidebar-accent-foreground: 220 25% 85%;
+    --sidebar-border: 220 20% 30%;
+    --sidebar-ring: 170 60% 50%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Effect */
+  .glass-card {
+    background-color: hsl(var(--glass-background) / var(--glass-opacity));
+    backdrop-filter: blur(15px); /* Increased blur for more depth */
+    border: 1px solid hsl(var(--border) / 0.7); /* Slightly stronger border */
+    @apply shadow-soft-lg rounded-3xl;
+  }
+
+  /* Glow Effects */
+  .glow-accent {
+    box-shadow: 0 0 20px hsl(var(--glow) / 0.3);
+  }
+  
+  .glow-accent-lg {
+    box-shadow: 0 0 40px hsl(var(--glow) / 0.4);
+  }
+
+  /* Stronger glow for interactive elements */
+  .glow-on-hover {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .glow-on-hover:hover {
+    box-shadow: var(--glow-strong); /* Using the new stronger glow */
+    transform: translateY(-3px) scale(1.02); /* Slightly more pronounced lift */
+  }
+
+  /* Soft Shadows */
+  .shadow-soft {
+    box-shadow: 0 10px 40px -10px hsl(var(--shadow-soft) / 0.3);
+  }
+
+  .shadow-soft-lg {
+    box-shadow: 0 25px 70px -15px hsl(var(--shadow-soft) / 0.45); /* Adjusted for more depth */
+  }
+
+  /* Interactive Elements */
+  .interactive-scale {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .interactive-scale:hover {
+    transform: scale(1.05) translateY(-2px);
+  }
+
+  /* Button Variants */
+  .btn-primary {
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+    border-radius: var(--radius);
+    transition: var(--transition-glow);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 25px hsl(var(--primary) / 0.3);
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  .btn-accent {
+    background: var(--gradient-accent);
+    color: hsl(var(--accent-foreground));
+    border-radius: var(--radius);
+    transition: var(--transition-glow);
+  }
+
+  .btn-accent:hover {
+    box-shadow: 0 8px 25px hsl(var(--accent) / 0.4);
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  /* Card Styles */
+  .card-soft {
+    background: var(--gradient-soft);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+  }
+
+  .card-soft:hover {
+    box-shadow: 0 20px 50px -15px hsl(var(--shadow-soft) / 0.4);
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  /* Enhanced animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
